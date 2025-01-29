@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "olympicadf2197"
+		},
+		"AzureDataLakeStorageLS_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorageLS_properties_typeProperties_url": {
+			"value": "https://datalakeolympic.dfs.core.windows.net/"
+		},
+		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+			"value": "https://OlympicDatakeyVault.vault.azure.net/"
+		},
+		"HttpAthleteLS_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Athletes.csv"
+		},
+		"HttpAthleteLS_properties_typeProperties_userName": {
+			"value": "pviswalaskhmi"
+		},
+		"HttpCoachesLS_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Coaches.csv"
+		},
+		"HttpCoachesLS_properties_typeProperties_userName": {
+			"value": "pviswalakshmi"
+		},
+		"HttpGenderLS_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/EntriesGender.csv"
+		},
+		"HttpGenderLS_properties_typeProperties_userName": {
+			"value": "pviswalakshmi"
+		},
+		"HttpMedalsLS_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Medals.csv"
+		},
+		"HttpMedalsLS_properties_typeProperties_userName": {
+			"value": "pviswalakshmi"
+		},
+		"HttpTeamsLS_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Teams.csv"
+		},
+		"HttpTeamsLS_properties_typeProperties_userName": {
+			"value": "pviswalakshmi"
+		}
+	}
+}

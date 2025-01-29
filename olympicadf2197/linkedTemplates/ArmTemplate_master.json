@@ -1,0 +1,133 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "olympicadf2197"
+		},
+		"AzureDataLakeStorageLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageLS'"
+		},
+		"AzureDataLakeStorageLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalakeolympic.dfs.core.windows.net/"
+		},
+		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://OlympicDatakeyVault.vault.azure.net/"
+		},
+		"HttpAthleteLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Athletes.csv"
+		},
+		"HttpAthleteLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "pviswalaskhmi"
+		},
+		"HttpCoachesLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Coaches.csv"
+		},
+		"HttpCoachesLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "pviswalakshmi"
+		},
+		"HttpGenderLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/EntriesGender.csv"
+		},
+		"HttpGenderLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "pviswalakshmi"
+		},
+		"HttpMedalsLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Medals.csv"
+		},
+		"HttpMedalsLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "pviswalakshmi"
+		},
+		"HttpTeamsLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Teams.csv"
+		},
+		"HttpTeamsLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "pviswalakshmi"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "olympicadf2197_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorageLS_accountKey": {
+						"value": "[parameters('AzureDataLakeStorageLS_accountKey')]"
+					},
+					"AzureDataLakeStorageLS_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorageLS_properties_typeProperties_url')]"
+					},
+					"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVaultLS_properties_typeProperties_baseUrl')]"
+					},
+					"HttpAthleteLS_properties_typeProperties_url": {
+						"value": "[parameters('HttpAthleteLS_properties_typeProperties_url')]"
+					},
+					"HttpAthleteLS_properties_typeProperties_userName": {
+						"value": "[parameters('HttpAthleteLS_properties_typeProperties_userName')]"
+					},
+					"HttpCoachesLS_properties_typeProperties_url": {
+						"value": "[parameters('HttpCoachesLS_properties_typeProperties_url')]"
+					},
+					"HttpCoachesLS_properties_typeProperties_userName": {
+						"value": "[parameters('HttpCoachesLS_properties_typeProperties_userName')]"
+					},
+					"HttpGenderLS_properties_typeProperties_url": {
+						"value": "[parameters('HttpGenderLS_properties_typeProperties_url')]"
+					},
+					"HttpGenderLS_properties_typeProperties_userName": {
+						"value": "[parameters('HttpGenderLS_properties_typeProperties_userName')]"
+					},
+					"HttpMedalsLS_properties_typeProperties_url": {
+						"value": "[parameters('HttpMedalsLS_properties_typeProperties_url')]"
+					},
+					"HttpMedalsLS_properties_typeProperties_userName": {
+						"value": "[parameters('HttpMedalsLS_properties_typeProperties_userName')]"
+					},
+					"HttpTeamsLS_properties_typeProperties_url": {
+						"value": "[parameters('HttpTeamsLS_properties_typeProperties_url')]"
+					},
+					"HttpTeamsLS_properties_typeProperties_userName": {
+						"value": "[parameters('HttpTeamsLS_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
