@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Teams.csv",
+			"url": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Athletes.csv",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Basic",
 			"userName": "pviswalaskhmi",
