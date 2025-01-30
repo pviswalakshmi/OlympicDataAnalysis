@@ -1,0 +1,17 @@
+{
+	"name": "Olympic Data Analysis",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://datalakeolympic.dfs.core.windows.net/conformed/olympic_data/coaches/part-00000-tid-1118134581386558720-69ed55b7-12dd-4b56-89c8-c4b57b928af4-32-1-c000.csv',\n        FORMAT = 'CSV',\n        PARSER_VERSION = '2.0'\n    ) AS [result]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
