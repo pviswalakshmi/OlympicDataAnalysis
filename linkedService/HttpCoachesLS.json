@@ -1,0 +1,21 @@
+{
+	"name": "HttpCoachesLS",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://raw.githubusercontent.com/pviswalakshmi/project-olympic/refs/heads/main/Coaches.csv",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Basic",
+			"userName": "pviswalakshmi",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultLS",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "GitHubSecret"
+			}
+		}
+	}
+}
