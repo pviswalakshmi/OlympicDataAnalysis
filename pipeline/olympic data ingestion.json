@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy athlete data",
+				"name": "Copy athletes data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -64,7 +64,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Copy athlete data",
+						"activity": "Copy athletes data",
 						"dependencyConditions": [
 							"Completed"
 						]
